@@ -15,6 +15,14 @@
     "lib": [
       "es2017",
       "dom"
-    ]
+    ],
+    "paths": {
+      "wp-angular": [
+        "dist/wp-angular"
+      ],
+      "wp-angular/*": [
+        "dist/wp-angular/*"
+      ]
+    }
   }
 }

@@ -1,0 +1,4 @@
+[submodule "projects/wp-angular"]
+	path = projects/wp-angular
+	url = https://github.com/akgurjar/wp-angular.git
+	branch = master

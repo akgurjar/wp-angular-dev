@@ -125,6 +125,46 @@
           }
         }
       }
+    },
+    "wp-angular": {
+      "root": "projects/wp-angular",
+      "sourceRoot": "projects/wp-angular/src",
+      "projectType": "library",
+      "prefix": "wp",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/wp-angular/tsconfig.lib.json",
+            "project": "projects/wp-angular/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "projects/wp-angular/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/wp-angular/src/test.ts",
+            "tsConfig": "projects/wp-angular/tsconfig.spec.json",
+            "karmaConfig": "projects/wp-angular/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/wp-angular/tsconfig.lib.json",
+              "projects/wp-angular/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "wp-angular-dev"
