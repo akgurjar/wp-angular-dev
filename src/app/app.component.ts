@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'app';
+  courseName = 'Angular 6';
+  courseIcon = 'favicon.ico';
+  constructor() {
+  }
 }
